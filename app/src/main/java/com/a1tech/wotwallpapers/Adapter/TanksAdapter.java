@@ -3,9 +3,12 @@ package com.a1tech.wotwallpapers.Adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,6 +55,10 @@ public class TanksAdapter extends RecyclerView.Adapter<TanksAdapter.MyViewHolder
                 inflater.getContext().startActivity(i);
             }
         });
+
+
+
+
     }
 
     @Override
@@ -62,10 +69,10 @@ public class TanksAdapter extends RecyclerView.Adapter<TanksAdapter.MyViewHolder
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tankName;
         ImageView tankImage;
+        Button tankDownload;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-
             tankName = itemView.findViewById(R.id.tvName);
             tankImage = itemView.findViewById(R.id.ivTank);
 

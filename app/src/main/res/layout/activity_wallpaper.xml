@@ -17,20 +17,39 @@
     <!--creating a button to set the wallpaper-->
     <Button
         android:id="@+id/idBtnSetWallpaper"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button_back"
         android:text="Set Wallpaper"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="15sp"
-         />
+        android:textSize="15sp" />
+
 
     <!--creating a progress bar for loading indicator-->
+
+    <Button
+        android:id="@+id/idDownloadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_back"
+        android:text="Download"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
     <ProgressBar
         android:id="@+id/idPBLoading"
         android:layout_width="wrap_content"

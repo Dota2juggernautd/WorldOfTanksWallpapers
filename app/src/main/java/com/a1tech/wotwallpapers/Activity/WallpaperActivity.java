@@ -4,6 +4,7 @@ import android.app.WallpaperManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -61,8 +62,19 @@ public class WallpaperActivity extends AppCompatActivity {
 
         wallpaperManager = WallpaperManager.getInstance(getApplicationContext());
         Button setWallpaper = findViewById(R.id.idBtnSetWallpaper);
+        Button setDownload = findViewById(R.id.idDownloadButton);
 
         //on below line we are adding on click listner to our set wallpaper button.
+        setDownload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                image.setDrawingCacheEnabled(true);
+                Bitmap b = image.getDrawingCache();
+                MediaStore.Images.Media.insertImage(getContentResolver(), b,"00", "description");
+                Toast.makeText(WallpaperActivity.this, "изображение сохранено в галерею", Toast.LENGTH_SHORT).show();
+            }
+        });
         setWallpaper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
